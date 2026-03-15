@@ -27,7 +27,13 @@ export const Terminal: React.FC<TerminalProps> = ({ onClose }) => {
 
     switch (command) {
       case 'help':
-        output = 'Available commands: about, skills, projects, experience, contact, clear, exit';
+        output = 'Available commands: about, skills, projects, experience, summary, contact, ls, clear, exit';
+        break;
+      case 'ls':
+        output = 'Sections: home, about, journey, projects, case-studies, github, contact';
+        break;
+      case 'summary':
+        output = `Experience: ${portfolioData.quickSummary.experience}\nStatus: ${portfolioData.quickSummary.availability}\nLocation: ${portfolioData.quickSummary.location}\n\nHighlights:\n${portfolioData.quickSummary.highlights.map(h => `- ${h}`).join('\n')}`;
         break;
       case 'about':
         output = portfolioData.profile.bio;

@@ -37,6 +37,7 @@ export const Chatbot: React.FC = () => {
         config: {
           systemInstruction: `You are an AI assistant for Manish Tiwari's portfolio. 
           Use the following data to answer questions about him: ${JSON.stringify(portfolioData)}.
+          Pay special attention to the 'caseStudies' for deep technical insights and 'quickSummary' for high-level info.
           Be professional, concise, and helpful. Use markdown for formatting (bold, lists, etc.) where appropriate. 
           If you don't know something, say you'll forward the message to Manish.`
         }

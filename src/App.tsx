@@ -1,18 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Github, Linkedin, Twitter, Download, Mail, Terminal as TerminalIcon, ChevronRight, MessageCircle, ExternalLink } from 'lucide-react';
+import { Github, Linkedin, Twitter, Download, Mail, Terminal as TerminalIcon, ChevronRight, MessageCircle, ExternalLink, Zap, Shield, BarChart3, Layers } from 'lucide-react';
 import portfolioData from './data/portfolio.json';
 import { ThreeScene } from './components/ThreeScene';
 import { Terminal } from './components/Terminal';
 import { Chatbot } from './components/Chatbot';
 import { CustomCursor } from './components/CustomCursor';
 import { Typewriter } from './components/Typewriter';
+import { OrbitingIcons } from './components/OrbitingIcons';
+import { ThemeToggler } from './components/ThemeToggler';
 import { cn } from './utils/cn';
 import Tilt from 'react-parallax-tilt';
 import { GitHubCalendar } from 'react-github-calendar';
 
 export default function App() {
   const [isTerminalOpen, setIsTerminalOpen] = useState(false);
+  const [isSummaryMode, setIsSummaryMode] = useState(false);
   const [booting, setBooting] = useState(true);
   const [bootText, setBootText] = useState<string[]>([]);
   
@@ -65,6 +68,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-bg text-white selection:bg-primary selection:text-bg cursor-none">
       <CustomCursor />
+      <ThemeToggler />
       <ThreeScene />
       <Navbar />
       
@@ -99,13 +103,63 @@ export default function App() {
                   LAUNCH TERMINAL
                 </span>
               </button>
-              <a 
-                href="#contact"
-                className="px-8 py-4 bg-white/5 border border-white/10 rounded-full font-orbitron text-sm font-bold text-white hover:bg-white/10 transition-all duration-300"
+              <button 
+                onClick={() => setIsSummaryMode(!isSummaryMode)}
+                className={cn(
+                  "px-8 py-4 border rounded-full font-orbitron text-sm font-bold transition-all duration-300 flex items-center gap-2",
+                  isSummaryMode 
+                    ? "bg-secondary text-bg border-secondary shadow-[0_0_20px_rgba(0,243,255,0.4)]" 
+                    : "bg-white/5 border-white/10 text-white hover:bg-white/10"
+                )}
               >
-                GET IN TOUCH
-              </a>
+                <Zap size={18} />
+                {isSummaryMode ? "EXIT SUMMARY" : "RECRUITER MODE"}
+              </button>
             </div>
+
+            <AnimatePresence>
+              {isSummaryMode && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: 20, scale: 0.95 }}
+                  className="mt-12 max-w-4xl mx-auto grid md:grid-cols-3 gap-6 text-left"
+                >
+                  <div className="glass p-6 rounded-2xl border-secondary/30">
+                    <h4 className="text-secondary font-orbitron text-xs tracking-widest mb-4 flex items-center gap-2">
+                      <BarChart3 size={14} /> CORE METRICS
+                    </h4>
+                    <ul className="space-y-3 text-sm">
+                      <li className="flex justify-between"><span className="text-white/40">Exp:</span> <span className="text-white font-bold">{portfolioData.quickSummary.experience}</span></li>
+                      <li className="flex justify-between"><span className="text-white/40">Status:</span> <span className="text-green-400 font-bold">{portfolioData.quickSummary.availability}</span></li>
+                      <li className="flex justify-between"><span className="text-white/40">Loc:</span> <span className="text-white font-bold">{portfolioData.quickSummary.location}</span></li>
+                    </ul>
+                  </div>
+                  <div className="glass p-6 rounded-2xl border-primary/30">
+                    <h4 className="text-primary font-orbitron text-xs tracking-widest mb-4 flex items-center gap-2">
+                      <Shield size={14} /> TOP STACK
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {portfolioData.quickSummary.topSkills.map((skill, i) => (
+                        <span key={i} className="px-2 py-1 bg-primary/10 border border-primary/20 rounded text-[10px] text-primary font-mono">{skill}</span>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="glass p-6 rounded-2xl border-white/20">
+                    <h4 className="text-white font-orbitron text-xs tracking-widest mb-4 flex items-center gap-2">
+                      <Layers size={14} /> HIGHLIGHTS
+                    </h4>
+                    <ul className="space-y-2">
+                      {portfolioData.quickSummary.highlights.map((h, i) => (
+                        <li key={i} className="text-[11px] text-white/60 flex gap-2">
+                          <span className="text-primary">▹</span> {h}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </motion.div>
 
           {/* Social Icons */}
@@ -162,6 +216,7 @@ export default function App() {
             viewport={{ once: true }}
             className="relative"
           >
+            <OrbitingIcons />
             <div className="relative z-10 w-full aspect-square max-w-md mx-auto rounded-3xl overflow-hidden neon-border group">
               <img 
                 src={portfolioData.profile.avatar} 
@@ -169,13 +224,6 @@ export default function App() {
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-bg to-transparent opacity-60" />
-            </div>
-            {/* Floating Icons Decor */}
-            <div className="absolute -top-10 -right-10 w-20 h-20 glass rounded-2xl flex items-center justify-center animate-bounce">
-              <div className="w-10 h-10 bg-primary/20 rounded-lg" />
-            </div>
-            <div className="absolute -bottom-10 -left-10 w-24 h-24 glass rounded-full flex items-center justify-center animate-pulse">
-              <div className="w-12 h-12 bg-secondary/20 rounded-full" />
             </div>
           </motion.div>
         </section>
@@ -273,6 +321,48 @@ export default function App() {
 
         {/* Projects Section */}
         <section id="projects" className="space-y-20">
+          <div>
+            <SectionHeader title="CASE STUDIES" subtitle="Engineering Deep Dives" center />
+            <div className="space-y-16">
+              {portfolioData.caseStudies.map((study, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="glass p-8 md:p-12 rounded-[3rem] border-white/5 hover:border-primary/20 transition-all group"
+                >
+                  <div className="grid lg:grid-cols-2 gap-12 items-center">
+                    <div className="space-y-8">
+                      <div>
+                        <h3 className="text-3xl font-bold mb-4 group-hover:text-primary transition-colors">{study.title}</h3>
+                        <div className="w-20 h-1 bg-primary/30 rounded-full" />
+                      </div>
+                      <div className="space-y-6">
+                        <div className="space-y-2">
+                          <h4 className="text-xs font-orbitron text-white/40 uppercase tracking-widest">The Problem</h4>
+                          <p className="text-white/70 leading-relaxed">{study.problem}</p>
+                        </div>
+                        <div className="space-y-2">
+                          <h4 className="text-xs font-orbitron text-secondary uppercase tracking-widest">The Solution</h4>
+                          <p className="text-white/70 leading-relaxed">{study.solution}</p>
+                        </div>
+                        <div className="bg-primary/5 border border-primary/20 p-6 rounded-2xl">
+                          <h4 className="text-xs font-orbitron text-primary uppercase tracking-widest mb-2">The Impact</h4>
+                          <p className="text-primary font-bold">{study.impact}</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+                      <img src={study.diagram} alt="Architecture Diagram" className="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-700" />
+                      <div className="absolute inset-0 bg-primary/5 mix-blend-overlay" />
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
           <div>
             <SectionHeader title="PROFESSIONAL" subtitle="Enterprise Solutions" />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">

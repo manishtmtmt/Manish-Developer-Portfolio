@@ -117,5 +117,32 @@
     "username": "manishtiwari",
     "stats": "https://github-readme-stats.vercel.app/api?username=manishtiwari&show_icons=true&theme=tokyonight",
     "languages": "https://github-readme-stats.vercel.app/api/top-langs/?username=manishtiwari&layout=compact&theme=tokyonight"
+  },
+  "caseStudies": [
+    {
+      "title": "Scaling Microservices to 1M+ Users",
+      "problem": "Legacy monolithic architecture causing 5s+ latency and frequent downtime during peak traffic.",
+      "solution": "Migrated to a distributed microservices architecture using Go, gRPC, and Kubernetes with automated horizontal scaling.",
+      "impact": "Reduced P99 latency by 85%, achieved 99.99% uptime, and cut infrastructure costs by 30%.",
+      "diagram": "https://picsum.photos/seed/arch1/1200/600"
+    },
+    {
+      "title": "Real-time Collaborative Engine",
+      "problem": "High conflict rates in concurrent document editing and poor synchronization over unstable networks.",
+      "solution": "Implemented a CRDT-based sync engine using WebSockets and Redis for low-latency state propagation.",
+      "impact": "Sub-100ms sync across global regions and 0% data loss during network partitions.",
+      "diagram": "https://picsum.photos/seed/arch2/1200/600"
+    }
+  ],
+  "quickSummary": {
+    "experience": "4+ Years",
+    "topSkills": ["React/Next.js", "Node.js/Go", "AWS/K8s", "System Design"],
+    "availability": "Open for Senior Roles",
+    "location": "Remote / Hybrid",
+    "highlights": [
+      "Led team of 5 engineers",
+      "Architected 3 production-scale platforms",
+      "Open source contributor (100+ PRs)"
+    ]
   }
 }

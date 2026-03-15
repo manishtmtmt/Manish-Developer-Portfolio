@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
-@theme {
+:root {
   --color-bg: #0B0B0F;
   --color-primary: #00FF41; /* Neon Green */
   --color-secondary: #00E5FF; /* Electric Blue */
   --color-accent: #FF00E5; /* Cyber Pink */
   --color-glass: rgba(255, 255, 255, 0.03);
   --color-glass-border: rgba(255, 255, 255, 0.1);
+  --color-text: #E2E8F0;
   
   --font-orbitron: "Orbitron", sans-serif;
   --font-rajdhani: "Rajdhani", sans-serif;
@@ -16,11 +17,52 @@
   --font-exo: "Exo 2", sans-serif;
 }
 
+[data-theme='cyber-blue'] {
+  --color-bg: #050A15;
+  --color-primary: #00E5FF;
+  --color-secondary: #0070FF;
+  --color-accent: #FF00E5;
+}
+
+[data-theme='solar-orange'] {
+  --color-bg: #0F0905;
+  --color-primary: #FF8A00;
+  --color-secondary: #FFD600;
+  --color-accent: #00FF41;
+}
+
+[data-theme='ghost-white'] {
+  --color-bg: #F8FAFC;
+  --color-primary: #334155;
+  --color-secondary: #64748B;
+  --color-accent: #00FF41;
+  --color-text: #0F172A;
+  --color-glass: rgba(0, 0, 0, 0.03);
+  --color-glass-border: rgba(0, 0, 0, 0.1);
+}
+
+@theme {
+  --color-bg: var(--color-bg);
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-accent: var(--color-accent);
+  --color-glass: var(--color-glass);
+  --color-glass-border: var(--color-glass-border);
+  --color-text: var(--color-text);
+  
+  --font-orbitron: var(--font-orbitron);
+  --font-rajdhani: var(--font-rajdhani);
+  --font-mono: var(--font-mono);
+  --font-space: var(--font-space);
+  --font-exo: var(--font-exo);
+}
+
 :root {
   background-color: var(--color-bg);
-  color: #E2E8F0;
+  color: var(--color-text);
   font-family: var(--font-space);
   scroll-behavior: smooth;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 body {
