@@ -150,15 +150,15 @@
       "metrics": [
         {
           "label": "Capability",
-          "value": "1000+ documents processed with AI semantic understanding"
+          "value": "1000+ Docs Processed"
         },
         {
           "label": "Automation",
-          "value": "Reduced manual document analysis by ~70%"
+          "value": "~70% Faster Analysis"
         },
         {
           "label": "Use Case",
-          "value": "Sub-second semantic search across large document sets"
+          "value": "Sub-second Semantic Search"
         }
       ]
     },
@@ -181,15 +181,15 @@
       "metrics": [
         {
           "label": "Providers",
-          "value": "3+ AI providers orchestrated in a single platform"
+          "value": "3+ AI Providers"
         },
         {
           "label": "Monitoring",
-          "value": "10K+ AI requests tracked and audited daily"
+          "value": "10K+ Requests Daily"
         },
         {
           "label": "Architecture",
-          "value": "Microservice architecture supporting scalable AI integrations"
+          "value": "Scalable Microservices"
         }
       ]
     },
@@ -210,12 +210,12 @@
       "metrics": [
         {
           "label": "Security",
-          "value": "JWT authentication with 5+ RBAC roles"
+          "value": "JWT + 5 RBAC Roles"
         },
-        { "label": "Modules", "value": "6+ HR automation modules implemented" },
+        { "label": "Modules", "value": "6+ HR Modules" },
         {
           "label": "Impact",
-          "value": "40% improvement in internal workflow efficiency"
+          "value": "40% Workflow Improvement"
         }
       ]
     },
@@ -229,15 +229,15 @@
       "metrics": [
         {
           "label": "Communication",
-          "value": "<300ms real-time WebRTC communication latency"
+          "value": "<300ms WebRTC Latency"
         },
         {
           "label": "Features",
-          "value": "4+ real-time collaboration features including chat and transcription"
+          "value": "4+ Real-time Features"
         },
         {
           "label": "Architecture",
-          "value": "Low-latency streaming architecture for multi-user sessions"
+          "value": "Low-latency Streaming"
         }
       ]
     },
@@ -253,15 +253,15 @@
       "metrics": [
         {
           "label": "AI Tools",
-          "value": "5+ AI generation tools in one SaaS platform"
+          "value": "5+ AI Gen Tools"
         },
         {
           "label": "Payments",
-          "value": "Stripe subscription billing with tiered plans"
+          "value": "Stripe Subscription Billing"
         },
         {
           "label": "Architecture",
-          "value": "Full-stack SaaS architecture supporting multi-feature AI apps"
+          "value": "Full-stack SaaS Platform"
         }
       ]
     },
@@ -277,12 +277,12 @@
       "metrics": [
         {
           "label": "Editor",
-          "value": "VSCode-powered Monaco editor for browser coding"
+          "value": "Monaco Browser Editor"
         },
-        { "label": "Preview", "value": "Instant real-time preview rendering" },
+        { "label": "Preview", "value": "Instant Real-time Preview" },
         {
           "label": "Features",
-          "value": "Authentication and snippet sharing platform"
+          "value": "Auth + Snippet Sharing"
         }
       ]
     },
@@ -298,15 +298,15 @@
       "metrics": [
         {
           "label": "AI Editing",
-          "value": "4+ AI powered image editing capabilities"
+          "value": "4+ AI Edit Features"
         },
         {
           "label": "Processing",
-          "value": "Cloudinary based scalable image pipeline"
+          "value": "Cloudinary Image Pipeline"
         },
         {
           "label": "Payments",
-          "value": "Stripe payment gateway with subscription support"
+          "value": "Stripe Subscription Support"
         }
       ]
     },
@@ -322,15 +322,15 @@
       "metrics": [
         {
           "label": "SDK",
-          "value": "Built using 100ms live video infrastructure"
+          "value": "100ms Live Infrastructure"
         },
         {
           "label": "Features",
-          "value": "Real-time video meetings with multi-user support"
+          "value": "Multi-user Video Rooms"
         },
         {
           "label": "Use Case",
-          "value": "Online collaboration and virtual meetings platform"
+          "value": "Secure Virtual Meetings"
         }
       ]
     },
@@ -346,10 +346,10 @@
       "metrics": [
         {
           "label": "Messaging",
-          "value": "Real-time messaging powered by Firebase"
+          "value": "Real-time Firebase Chat"
         },
-        { "label": "Auth", "value": "OAuth login with Google and Facebook" },
-        { "label": "Media", "value": "File and image sharing up to 5MB" }
+        { "label": "Auth", "value": "Google + Facebook OAuth" },
+        { "label": "Media", "value": "File Sharing Up to 5MB" }
       ]
     }
   ],
