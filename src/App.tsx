@@ -14,6 +14,7 @@ import {
   Shield,
   BarChart3,
   Layers,
+  X,
 } from "lucide-react";
 import portfolioData from "./data/portfolio.json";
 import { ThreeScene } from "./components/ThreeScene";
@@ -82,16 +83,16 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-bg text-white selection:bg-primary selection:text-bg cursor-none">
+    <div className="min-h-screen bg-bg text-white selection:bg-primary selection:text-bg md:cursor-none">
       <CustomCursor />
       <ThreeScene />
       <Navbar />
 
-      <main className="container mx-auto px-6 pt-32 pb-20 space-y-40">
+      <main className="container mx-auto px-4 sm:px-6 pt-24 sm:pt-32 pb-12 sm:pb-20 space-y-20 sm:space-y-40">
         {/* Hero Section */}
         <section
           id="home"
-          className="min-h-[80vh] flex flex-col justify-center items-center text-center relative"
+          className="min-h-[60vh] sm:min-h-[80vh] flex flex-col justify-center items-center text-center relative"
         >
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -101,20 +102,20 @@ export default function App() {
             <h2 className="font-orbitron text-primary text-lg md:text-xl mb-4 tracking-[0.2em] uppercase">
               {portfolioData.profile.title}
             </h2>
-            <h1 className="text-5xl md:text-8xl font-black mb-6 font-orbitron tracking-tighter">
+            <h1 className="text-3xl sm:text-5xl md:text-8xl font-black mb-4 sm:mb-6 font-orbitron tracking-tighter">
               <span className="text-white">MANISH</span>{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary neon-text">
                 TIWARI
               </span>
             </h1>
-            <div className="text-white/60 text-lg md:text-2xl max-w-2xl mx-auto mb-10 font-rajdhani h-8">
+            <div className="text-white/60 text-base sm:text-lg md:text-2xl max-w-2xl mx-auto mb-6 sm:mb-10 font-rajdhani h-8">
               <Typewriter text={portfolioData.profile.tagline} delay={40} />
             </div>
 
-            <div className="flex flex-wrap justify-center gap-6">
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-6">
               <button
                 onClick={() => setIsTerminalOpen(true)}
-                className="group relative px-8 py-4 bg-primary/10 border border-primary/50 rounded-full font-orbitron text-sm font-bold text-primary hover:bg-primary hover:text-bg transition-all duration-300 shadow-[0_0_20px_rgba(0,255,65,0.2)]"
+                className="group relative px-5 py-3 sm:px-8 sm:py-4 bg-primary/10 border border-primary/50 rounded-full font-orbitron text-xs sm:text-sm font-bold text-primary hover:bg-primary hover:text-bg transition-all duration-300 shadow-[0_0_20px_rgba(0,255,65,0.2)]"
               >
                 <span className="flex items-center gap-2">
                   <TerminalIcon size={18} />
@@ -124,7 +125,7 @@ export default function App() {
               <button
                 onClick={() => setIsSummaryMode(!isSummaryMode)}
                 className={cn(
-                  "px-8 py-4 border rounded-full font-orbitron text-sm font-bold transition-all duration-300 flex items-center gap-2",
+                  "px-5 py-3 sm:px-8 sm:py-4 border rounded-full font-orbitron text-xs sm:text-sm font-bold transition-all duration-300 flex items-center gap-2",
                   isSummaryMode
                     ? "bg-secondary text-bg border-secondary shadow-[0_0_20px_rgba(0,243,255,0.4)]"
                     : "bg-white/5 border-white/10 text-white hover:bg-white/10",
@@ -235,16 +236,19 @@ export default function App() {
         </section>
 
         {/* About Section */}
-        <section id="about" className="grid md:grid-cols-2 gap-16 items-center">
+        <section
+          id="about"
+          className="grid md:grid-cols-2 gap-8 md:gap-16 items-center"
+        >
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
             <SectionHeader title="ABOUT ME" subtitle="The Architect" />
-            <div className="glass p-8 rounded-3xl space-y-6 relative overflow-hidden">
+            <div className="glass p-5 sm:p-8 rounded-2xl sm:rounded-3xl space-y-6 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 blur-3xl rounded-full -mr-16 -mt-16" />
-              <p className="text-white/70 leading-relaxed text-lg font-rajdhani">
+              <p className="text-white/70 leading-relaxed text-base sm:text-lg font-rajdhani">
                 {portfolioData.profile.bio}
               </p>
               <div className="flex gap-4">
@@ -284,7 +288,7 @@ export default function App() {
             subtitle="Core Competencies"
             center
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
             {portfolioData.skills.map((skillGroup, i) => (
               <motion.div
                 key={i}
@@ -292,9 +296,9 @@ export default function App() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="glass p-8 rounded-3xl border-t-2 border-primary/20 hover:border-primary/50 transition-all duration-500 group"
+                className="glass p-5 sm:p-8 rounded-2xl sm:rounded-3xl border-t-2 border-primary/20 hover:border-primary/50 transition-all duration-500 group"
               >
-                <h3 className="font-orbitron text-primary text-lg mb-6 flex items-center gap-3">
+                <h3 className="font-orbitron text-primary text-base sm:text-lg mb-4 sm:mb-6 flex items-center gap-3">
                   <span className="w-2 h-2 bg-primary rounded-full group-hover:scale-150 transition-transform" />
                   {skillGroup.category}
                 </h3>
@@ -330,7 +334,7 @@ export default function App() {
               className="absolute left-0 md:left-1/2 top-0 w-px bg-gradient-to-b from-primary via-secondary to-transparent origin-top"
             />
 
-            <div className="space-y-12">
+            <div className="space-y-8 sm:space-y-12">
               {portfolioData.journey.map((item, i) => (
                 <motion.div
                   key={i}
@@ -361,7 +365,7 @@ export default function App() {
                   />
                   <div className="w-full md:w-1/2">
                     <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5}>
-                      <div className="glass p-8 rounded-3xl hover:bg-white/5 transition-all duration-300 border border-white/5 hover:border-primary/30 group">
+                      <div className="glass p-5 sm:p-8 rounded-2xl sm:rounded-3xl hover:bg-white/5 transition-all duration-300 border border-white/5 hover:border-primary/30 group">
                         <span className="text-primary font-mono text-sm mb-2 block group-hover:neon-text transition-all">
                           {item.year}
                         </span>
@@ -397,28 +401,28 @@ export default function App() {
         </section>
 
         {/* Projects Section */}
-        <section id="projects" className="space-y-20">
+        <section id="projects" className="space-y-12 sm:space-y-20">
           <div>
             <SectionHeader
               title="CASE STUDIES"
               subtitle="Engineering Deep Dives"
               center
             />
-            <div className="space-y-16">
+            <div className="space-y-10 sm:space-y-16">
               {portfolioData.caseStudies.map((study, i) => (
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className="glass p-8 md:p-12 rounded-[3rem] border-white/5 hover:border-primary/20 transition-all group"
+                  className="glass p-5 sm:p-8 md:p-12 rounded-2xl sm:rounded-[3rem] border-white/5 hover:border-primary/20 transition-all group"
                 >
-                  <div className="grid lg:grid-cols-2 gap-12 items-center">
+                  <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
                     <div
                       className={cn("space-y-8", i % 2 !== 0 && "lg:order-2")}
                     >
                       <div>
-                        <h3 className="text-3xl font-bold mb-4 group-hover:text-primary transition-colors">
+                        <h3 className="text-xl sm:text-3xl font-bold mb-4 group-hover:text-primary transition-colors">
                           {study.title}
                         </h3>
                         <div className="w-20 h-1 bg-primary/30 rounded-full" />
@@ -476,7 +480,7 @@ export default function App() {
               title="PROFESSIONAL"
               subtitle="Enterprise Solutions"
             />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10">
               {portfolioData.projects
                 .filter((p) => p.type === "professional")
                 .map((project, i) => (
@@ -487,7 +491,7 @@ export default function App() {
 
           <div>
             <SectionHeader title="PERSONAL" subtitle="Experimental Lab" />
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10">
               {portfolioData.projects
                 .filter((p) => p.type === "personal")
                 .map((project, i) => (
@@ -504,7 +508,7 @@ export default function App() {
             subtitle="GitHub Contributions"
             center
           />
-          <div className="glass p-8 rounded-3xl flex flex-col items-center overflow-x-auto">
+          <div className="glass p-5 sm:p-8 rounded-2xl sm:rounded-3xl flex flex-col items-center overflow-x-auto">
             <GitHubCalendar
               username={portfolioData.github.username}
               colorScheme="dark"
@@ -512,7 +516,7 @@ export default function App() {
                 dark: ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"],
               }}
             />
-            <div className="grid md:grid-cols-2 gap-8 mt-12 w-full">
+            <div className="grid md:grid-cols-2 gap-4 sm:gap-8 mt-8 sm:mt-12 w-full">
               <img
                 src={portfolioData.github.stats}
                 alt="GitHub Stats"
@@ -534,7 +538,7 @@ export default function App() {
             subtitle="Let's Build Something"
             center
           />
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-3 gap-4 sm:gap-8 mb-8 sm:mb-12">
             <div className="glass p-6 rounded-3xl text-center flex flex-col items-center gap-4 group hover:border-primary/30 transition-all">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
                 <Mail size={24} />
@@ -579,14 +583,14 @@ export default function App() {
               </div>
             </a>
           </div>
-          <div className="glass p-10 rounded-[3rem] relative overflow-hidden">
+          <div className="glass p-6 sm:p-10 rounded-2xl sm:rounded-[3rem] relative overflow-hidden">
             <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-secondary/10 blur-[100px] rounded-full" />
             <form
               ref={formRef}
               className="space-y-8 relative z-10"
               onSubmit={handleSubmit}
             >
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid md:grid-cols-2 gap-4 sm:gap-8">
                 <div className="space-y-2">
                   <label className="text-xs font-orbitron text-white/40 uppercase tracking-widest">
                     Full Name
@@ -625,7 +629,7 @@ export default function App() {
                 type="submit"
                 disabled={formStatus === "sending"}
                 className={cn(
-                  "w-full py-5 font-orbitron font-black text-lg rounded-2xl transition-transform active:scale-95",
+                  "w-full py-4 sm:py-5 font-orbitron font-black text-base sm:text-lg rounded-2xl transition-transform active:scale-95",
                   formStatus === "sending"
                     ? "bg-white/10 text-white/40 cursor-wait"
                     : "bg-primary text-bg shadow-[0_0_30px_rgba(0,255,65,0.3)] hover:scale-[1.02]",
@@ -738,9 +742,9 @@ const Navbar = () => {
 
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden text-white"
+          className="md:hidden text-white p-2 -mr-2"
         >
-          <TerminalIcon size={24} />
+          {mobileOpen ? <X size={24} /> : <TerminalIcon size={24} />}
         </button>
       </div>
 
@@ -750,7 +754,7 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-bg/95 border-b border-white/10 overflow-hidden"
+            className="md:hidden bg-bg/95 border-b border-white/10 overflow-hidden relative z-50"
           >
             <div className="flex flex-col p-6 gap-6">
               {navLinks.map((link, i) => (
@@ -780,8 +784,8 @@ const ProjectCard = ({ project, index }: { project: any; index: number }) => (
     transition={{ delay: index * 0.1 }}
   >
     <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5} scale={1.01}>
-      <div className="glass rounded-3xl overflow-hidden group border border-white/5 hover:border-primary/30 transition-all duration-500">
-        <div className="relative h-64 overflow-hidden">
+      <div className="glass rounded-2xl sm:rounded-3xl overflow-hidden group border border-white/5 hover:border-primary/30 transition-all duration-500">
+        <div className="relative h-48 sm:h-64 overflow-hidden">
           <img
             src={project.image}
             alt={project.title}
@@ -829,9 +833,9 @@ const ProjectCard = ({ project, index }: { project: any; index: number }) => (
             ))}
           </div>
         </div>
-        <div className="p-8">
+        <div className="p-5 sm:p-8">
           <div className="flex justify-between items-start mb-4">
-            <h3 className="text-2xl font-bold group-hover:text-primary transition-colors">
+            <h3 className="text-xl sm:text-2xl font-bold group-hover:text-primary transition-colors">
               {project.title}
             </h3>
             <span
@@ -873,7 +877,7 @@ const SectionHeader = ({
   subtitle: string;
   center?: boolean;
 }) => (
-  <div className={cn("mb-16", center ? "text-center" : "")}>
+  <div className={cn("mb-10 sm:mb-16", center ? "text-center" : "")}>
     <motion.span
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -884,7 +888,7 @@ const SectionHeader = ({
     <motion.h2
       initial={{ opacity: 0, y: 10 }}
       whileInView={{ opacity: 1, y: 0 }}
-      className="text-3xl md:text-5xl font-orbitron font-black tracking-tight"
+      className="text-2xl sm:text-3xl md:text-5xl font-orbitron font-black tracking-tight"
     >
       {subtitle}
     </motion.h2>
