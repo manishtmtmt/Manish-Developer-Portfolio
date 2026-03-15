@@ -2,147 +2,402 @@
   "profile": {
     "name": "Manish Tiwari",
     "title": "Full Stack Engineer",
-    "tagline": "Architecting Scalable Systems & Immersive Digital Experiences",
-    "bio": "I am a Senior Software Engineer with 4+ years of experience specializing in building high-performance web applications. My passion lies at the intersection of robust backend architecture and cutting-edge frontend interactions.",
-    "avatar": "https://picsum.photos/seed/manish/400/400",
-    "resumeUrl": "#",
+    "tagline": "Building Scalable Systems & AI-Powered Applications",
+    "bio": "Full Stack Engineer with 4+ years of experience developing modern web applications and AI-driven systems. Experienced in building scalable backend services, interactive frontend applications, and integrating advanced AI technologies such as Retrieval Augmented Generation and agent-based AI systems.",
+    "avatar": "https://res.cloudinary.com/my-first-blog-app/image/upload/v1773573245/Generated_Image_March_15_2026_-_4_37PM_u7h7bt.png",
+    "resumeUrl": "https://drive.google.com/file/d/1dBUSvK05C5g0r4SLNSh5LRIa3tlJyIlZ/view?usp=sharing",
     "email": "manisht.mt.mt@gmail.com"
   },
+
   "socials": [
-    { "platform": "GitHub", "url": "https://github.com", "icon": "Github" },
-    { "platform": "LinkedIn", "url": "https://linkedin.com", "icon": "Linkedin" },
-    { "platform": "Twitter", "url": "https://twitter.com", "icon": "Twitter" },
-    { "platform": "WhatsApp", "url": "https://wa.me/910000000000", "icon": "MessageCircle" }
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/manishtmtmt",
+      "icon": "Github"
+    },
+    {
+      "platform": "LinkedIn",
+      "url": "https://linkedin.com/in/wdmanisht",
+      "icon": "Linkedin"
+    },
+    {
+      "platform": "Twitter",
+      "url": "https://x.com/manisht_mt",
+      "icon": "Twitter"
+    },
+    {
+      "platform": "WhatsApp",
+      "url": "https://wa.me/919559008722",
+      "icon": "MessageCircle"
+    }
   ],
+
   "skills": [
     {
       "category": "Languages",
-      "items": ["TypeScript", "JavaScript", "Python", "Go", "Rust"]
+      "items": ["JavaScript", "TypeScript", "Python", "Golang", "SQL"]
     },
     {
       "category": "Frontend",
-      "items": ["React", "Next.js", "TailwindCSS", "Framer Motion", "Three.js"]
+      "items": [
+        "React",
+        "Next.js",
+        "Redux Toolkit",
+        "TailwindCSS",
+        "React Native",
+        "Expo"
+      ]
     },
     {
       "category": "Backend",
-      "items": ["Node.js", "Express", "FastAPI", "GraphQL", "gRPC"]
+      "items": [
+        "Node.js",
+        "Express.js",
+        "NestJS",
+        "REST API",
+        "WebSocket",
+        "Socket.io"
+      ]
     },
     {
       "category": "Databases",
-      "items": ["PostgreSQL", "MongoDB", "Redis", "Elasticsearch"]
+      "items": ["MongoDB", "PostgreSQL", "Redis"]
     },
     {
       "category": "Cloud & DevOps",
-      "items": ["AWS", "Docker", "Kubernetes", "CI/CD", "Terraform"]
+      "items": ["AWS", "EC2", "Docker", "Nginx", "Ubuntu", "CI/CD"]
+    },
+    {
+      "category": "AI & Data",
+      "items": [
+        "Retrieval Augmented Generation",
+        "Agentic AI",
+        "OpenAI",
+        "Vector Databases"
+      ]
+    },
+    {
+      "category": "Tools",
+      "items": [
+        "Git",
+        "GitHub",
+        "Swagger API",
+        "Jest",
+        "Playwright",
+        "WordPress"
+      ]
     }
   ],
+
   "journey": [
     {
-      "year": "2024 - Present",
-      "title": "Senior Software Engineer",
-      "organization": "Tech Innovators Inc.",
+      "year": "Sep 2024 - Mar 2026",
+      "title": "Software Development Engineer L1",
+      "organization": "Algorisys Technologies Pvt. Ltd.",
       "type": "experience",
-      "description": "Leading the development of a cloud-native microservices platform serving 1M+ active users.",
-      "technologies": ["React", "Node.js", "Kubernetes", "AWS"]
+      "description": "Developed AI-driven backend services and modern web applications including document intelligence systems and AI provider orchestration platforms.",
+      "technologies": [
+        "Golang",
+        "Node.js",
+        "Redis",
+        "PostgreSQL",
+        "OpenAI",
+        "Gemini",
+        "SolidJS"
+      ]
     },
     {
-      "year": "2022 - 2024",
-      "title": "Full Stack Developer",
-      "organization": "Digital Solutions Ltd.",
+      "year": "Nov 2023 - May 2024",
+      "title": "Software Engineer",
+      "organization": "Pinaca Technologies Pvt. Ltd.",
       "type": "experience",
-      "description": "Developed and maintained multiple high-traffic e-commerce applications.",
-      "technologies": ["Next.js", "TypeScript", "PostgreSQL"]
+      "description": "Led frontend and backend development for real-time communication platforms and web applications including WebRTC-based video conferencing systems.",
+      "technologies": [
+        "React",
+        "Redux Toolkit",
+        "Node.js",
+        "Express.js",
+        "Python",
+        "WebRTC",
+        "Mediasoup"
+      ]
     },
     {
-      "year": "2018 - 2022",
-      "title": "B.Tech in Computer Science",
-      "organization": "Global Institute of Technology",
+      "year": "Nov 2022 - Aug 2023",
+      "title": "Associate Software Engineer",
+      "organization": "Actyv.ai",
+      "type": "experience",
+      "description": "Worked on verification and document processing platforms supporting Aadhaar, PAN, driving license and GST validations with OCR based data extraction.",
+      "technologies": ["React", "Next.js", "Node.js", "TypeScript", "OCR"]
+    },
+    {
+      "year": "2022",
+      "title": "Full Stack Development",
+      "organization": "Masai School",
       "type": "education",
-      "description": "Specialized in Distributed Systems and Artificial Intelligence.",
-      "technologies": ["Algorithms", "Data Structures", "OS", "Networking"]
+      "description": "Completed an intensive full-stack development program focused on modern web technologies and production-ready software engineering practices.",
+      "technologies": ["JavaScript", "React", "Node.js", "Databases"]
     }
   ],
+
   "projects": [
     {
-      "title": "Quantum Ledger",
-      "description": "A high-frequency blockchain explorer with real-time data visualization and predictive analytics.",
-      "image": "https://picsum.photos/seed/quantum/800/450",
-      "tags": ["React", "D3.js", "WebSockets", "Rust"],
+      "title": "PDF Parser with RAG",
+      "description": "AI-powered document processing system that extracts insights from PDFs using Retrieval Augmented Generation. Enables semantic search, contextual question answering, and automated knowledge extraction from large document sets.",
+      "image": "https://res.cloudinary.com/my-first-blog-app/image/upload/v1773576346/Generated_Image_March_15_2026_-_5_33PM_u6f6g8.png",
+      "tags": ["Python", "Streamlit", "OpenAI", "Docling", "Vector DBs"],
       "type": "professional",
       "metrics": [
-        { "label": "Latency", "value": "< 50ms" },
-        { "label": "Throughput", "value": "10k tps" },
-        { "label": "Uptime", "value": "99.99%" }
+        {
+          "label": "Capability",
+          "value": "1000+ documents processed with AI semantic understanding"
+        },
+        {
+          "label": "Automation",
+          "value": "Reduced manual document analysis by ~70%"
+        },
+        {
+          "label": "Use Case",
+          "value": "Sub-second semantic search across large document sets"
+        }
       ]
     },
+
     {
-      "title": "Neural Mesh",
-      "description": "Distributed AI training platform utilizing idle browser resources via WebAssembly.",
-      "image": "https://picsum.photos/seed/neural/800/450",
-      "tags": ["WASM", "Go", "React", "WebRTC"],
-      "github": "https://github.com",
-      "demo": "https://demo.com",
-      "type": "personal",
-      "metrics": [
-        { "label": "Nodes", "value": "500+" },
-        { "label": "Efficiency", "value": "+40%" }
-      ]
-    },
-    {
-      "title": "Cyber-Terminal OS",
-      "description": "A browser-based operating system shell with a fully functional terminal and file system.",
-      "image": "https://picsum.photos/seed/terminal/800/450",
-      "tags": ["TypeScript", "Xterm.js", "Node.js"],
-      "github": "https://github.com",
-      "demo": "https://demo.com",
-      "type": "personal",
-      "metrics": [
-        { "label": "Boot Time", "value": "0.8s" },
-        { "label": "Commands", "value": "50+" }
-      ]
-    },
-    {
-      "title": "Enterprise Cloud Gateway",
-      "description": "Secure API gateway for enterprise-scale microservices architecture.",
-      "image": "https://picsum.photos/seed/gateway/800/450",
-      "tags": ["Go", "gRPC", "Redis", "Docker"],
+      "title": "AI Provider Orchestration Auditing Service",
+      "description": "Platform for orchestrating and auditing multiple AI providers including OpenAI, Gemini and Anthropic. Provides request routing, logging, monitoring and analytics for AI model usage across applications.",
+      "image": "https://res.cloudinary.com/my-first-blog-app/image/upload/v1773575504/Generated_Image_March_15_2026_-_5_20PM_qmvu0s.png",
+      "tags": [
+        "Go",
+        "Go Fiber",
+        "Redis",
+        "Postgres",
+        "OpenAI",
+        "Gemini",
+        "Anthropic",
+        "SolidJS"
+      ],
       "type": "professional",
       "metrics": [
-        { "label": "Requests", "value": "1M/day" },
-        { "label": "Security", "value": "Zero Trust" }
+        {
+          "label": "Providers",
+          "value": "3+ AI providers orchestrated in a single platform"
+        },
+        {
+          "label": "Monitoring",
+          "value": "10K+ AI requests tracked and audited daily"
+        },
+        {
+          "label": "Architecture",
+          "value": "Microservice architecture supporting scalable AI integrations"
+        }
+      ]
+    },
+
+    {
+      "title": "Sketch Master",
+      "description": "Internal HRMS system designed to streamline organizational workflows including document management and leave scheduling with role-based access control.",
+      "image": "https://res.cloudinary.com/my-first-blog-app/image/upload/v1773577753/Generated_Image_March_15_2026_-_5_53PM_wailzr.png",
+      "tags": [
+        "Node.js",
+        "Express",
+        "React Router",
+        "JWT",
+        "RBAC",
+        "TailwindCSS"
+      ],
+      "type": "professional",
+      "metrics": [
+        {
+          "label": "Security",
+          "value": "JWT authentication with 5+ RBAC roles"
+        },
+        { "label": "Modules", "value": "6+ HR automation modules implemented" },
+        {
+          "label": "Impact",
+          "value": "40% improvement in internal workflow efficiency"
+        }
+      ]
+    },
+
+    {
+      "title": "Video Calling Application",
+      "description": "Real-time video conferencing application enabling room creation, live chat, real-time transcription and collaborative communication.",
+      "image": "https://res.cloudinary.com/my-first-blog-app/image/upload/v1773577909/Generated_Image_March_15_2026_-_6_00PM_e1ykwr.png",
+      "tags": ["React", "TailwindCSS", "Redis", "WebRTC", "SocketIO"],
+      "type": "professional",
+      "metrics": [
+        {
+          "label": "Communication",
+          "value": "<300ms real-time WebRTC communication latency"
+        },
+        {
+          "label": "Features",
+          "value": "4+ real-time collaboration features including chat and transcription"
+        },
+        {
+          "label": "Architecture",
+          "value": "Low-latency streaming architecture for multi-user sessions"
+        }
+      ]
+    },
+
+    {
+      "title": "Genius AI SaaS",
+      "description": "AI-powered SaaS platform offering chat, code generation, audio generation, image generation and video generation tools with subscription payments.",
+      "image": "https://res.cloudinary.com/my-first-blog-app/image/upload/v1773578030/Generated_Image_March_15_2026_-_6_02PM_watyr1.png",
+      "tags": ["Next.js", "Tailwind CSS", "OpenAI", "Stripe"],
+      "github": "https://github.com/manishtmtmt/ai-saas",
+      "demo": "https://genius-two.vercel.app/",
+      "type": "personal",
+      "metrics": [
+        {
+          "label": "AI Tools",
+          "value": "5+ AI generation tools in one SaaS platform"
+        },
+        {
+          "label": "Payments",
+          "value": "Stripe subscription billing with tiered plans"
+        },
+        {
+          "label": "Architecture",
+          "value": "Full-stack SaaS architecture supporting multi-feature AI apps"
+        }
+      ]
+    },
+
+    {
+      "title": "MTWebLab",
+      "description": "Web-based code compiler and editor allowing users to write, preview and save HTML, CSS and JavaScript snippets with real-time preview functionality.",
+      "image": "https://res.cloudinary.com/my-first-blog-app/image/upload/v1773578203/Generated_Image_March_15_2026_-_6_05PM_cvkbyd.png",
+      "tags": ["Next.js", "Tailwind CSS", "Monaco Editor", "Prisma", "MongoDB"],
+      "github": "https://github.com/manishtmtmt/web-compiler-nextjs",
+      "demo": "https://mtweblab.vercel.app/",
+      "type": "personal",
+      "metrics": [
+        {
+          "label": "Editor",
+          "value": "VSCode-powered Monaco editor for browser coding"
+        },
+        { "label": "Preview", "value": "Instant real-time preview rendering" },
+        {
+          "label": "Features",
+          "value": "Authentication and snippet sharing platform"
+        }
+      ]
+    },
+
+    {
+      "title": "Imaginify",
+      "description": "AI powered image editing application supporting image restoration, generative fill, object removal and recoloring with integrated subscription payments.",
+      "image": "https://res.cloudinary.com/my-first-blog-app/image/upload/v1773578580/Generated_Image_March_15_2026_-_6_12PM_te6c3c.png",
+      "tags": ["Next.js", "Tailwind CSS", "Cloudinary", "Stripe", "MongoDB"],
+      "github": "https://github.com/manishtmtmt/imaginify",
+      "demo": "https://imaginify-pearl-six.vercel.app/",
+      "type": "personal",
+      "metrics": [
+        {
+          "label": "AI Editing",
+          "value": "4+ AI powered image editing capabilities"
+        },
+        {
+          "label": "Processing",
+          "value": "Cloudinary based scalable image pipeline"
+        },
+        {
+          "label": "Payments",
+          "value": "Stripe payment gateway with subscription support"
+        }
+      ]
+    },
+
+    {
+      "title": "VideoHub",
+      "description": "Video meeting platform enabling users to connect and collaborate in real time through secure meeting rooms.",
+      "image": "https://res.cloudinary.com/my-first-blog-app/image/upload/v1773577909/Generated_Image_March_15_2026_-_6_00PM_e1ykwr.png",
+      "tags": ["React", "Redux Toolkit", "100mslive/react-sdk"],
+      "github": "https://github.com/manishtmtmt/video-meet",
+      "demo": "https://video-meet-app-lemon.vercel.app/",
+      "type": "personal",
+      "metrics": [
+        {
+          "label": "SDK",
+          "value": "Built using 100ms live video infrastructure"
+        },
+        {
+          "label": "Features",
+          "value": "Real-time video meetings with multi-user support"
+        },
+        {
+          "label": "Use Case",
+          "value": "Online collaboration and virtual meetings platform"
+        }
+      ]
+    },
+
+    {
+      "title": "Chat Application",
+      "description": "Real-time group chat application supporting text messaging, file sharing and social authentication using Google and Facebook.",
+      "image": "https://res.cloudinary.com/my-first-blog-app/image/upload/v1773578969/Generated_Image_March_15_2026_-_6_18PM_ndckjx.png",
+      "tags": ["React", "Firebase", "Rsuite"],
+      "github": "https://github.com/manishtmtmt/chat-app",
+      "demo": "https://chat-app-15798.web.app/",
+      "type": "personal",
+      "metrics": [
+        {
+          "label": "Messaging",
+          "value": "Real-time messaging powered by Firebase"
+        },
+        { "label": "Auth", "value": "OAuth login with Google and Facebook" },
+        { "label": "Media", "value": "File and image sharing up to 5MB" }
       ]
     }
   ],
+
   "github": {
-    "username": "manishtiwari",
-    "stats": "https://github-readme-stats.vercel.app/api?username=manishtiwari&show_icons=true&theme=tokyonight",
-    "languages": "https://github-readme-stats.vercel.app/api/top-langs/?username=manishtiwari&layout=compact&theme=tokyonight"
+    "username": "manishtmtmt",
+    "stats": "https://github-readme-stats.vercel.app/api?username=manishtmtmt&show_icons=true&theme=tokyonight",
+    "languages": "https://github-readme-stats.vercel.app/api/top-langs/?username=manishtmtmt&layout=compact&theme=tokyonight"
   },
+
   "caseStudies": [
     {
-      "title": "Scaling Microservices to 1M+ Users",
-      "problem": "Legacy monolithic architecture causing 5s+ latency and frequent downtime during peak traffic.",
-      "solution": "Migrated to a distributed microservices architecture using Go, gRPC, and Kubernetes with automated horizontal scaling.",
-      "impact": "Reduced P99 latency by 85%, achieved 99.99% uptime, and cut infrastructure costs by 30%.",
-      "diagram": "https://picsum.photos/seed/arch1/1200/600"
+      "title": "AI Provider Service",
+      "problem": "Applications needed to integrate multiple AI providers while managing request routing, logging and auditing.",
+      "solution": "Built a centralized orchestration service using Go, Redis and PostgreSQL to route requests to multiple LLM providers while maintaining logs and monitoring usage.",
+      "impact": "3+ AI providers integrated (OpenAI, Gemini, Anthropic) • Handles 10K+ AI API requests per day • Reduced AI integration time by ~60% for new services • Centralized logging improved observability and debugging efficiency.",
+      "diagram": "https://res.cloudinary.com/my-first-blog-app/image/upload/v1773575504/Generated_Image_March_15_2026_-_5_20PM_qmvu0s.png"
     },
     {
-      "title": "Real-time Collaborative Engine",
-      "problem": "High conflict rates in concurrent document editing and poor synchronization over unstable networks.",
-      "solution": "Implemented a CRDT-based sync engine using WebSockets and Redis for low-latency state propagation.",
-      "impact": "Sub-100ms sync across global regions and 0% data loss during network partitions.",
-      "diagram": "https://picsum.photos/seed/arch2/1200/600"
+      "title": "PDF Extraction Service",
+      "problem": "Organizations needed faster ways to extract insights from large volumes of unstructured documents.",
+      "solution": "Implemented a Retrieval Augmented Generation pipeline that converts PDFs into searchable embeddings and enables contextual question answering.",
+      "impact": "1000+ PDF documents processed into embeddings • Reduced manual document review time by ~70% • Enabled semantic search with sub-second response time • Improved knowledge retrieval accuracy for internal users.",
+      "diagram": "https://res.cloudinary.com/my-first-blog-app/image/upload/v1773576346/Generated_Image_March_15_2026_-_5_33PM_u6f6g8.png"
+    },
+    {
+      "title": "HRMS Automation",
+      "problem": "Manual HR workflows caused inefficiencies in leave management and document handling.",
+      "solution": "Developed modules with authentication, role based access control and workflow automation within the HRMS platform.",
+      "impact": "Automated 5+ HR workflows including leave scheduling and document generation • Reduced manual HR tasks by ~50% • Improved employee request processing time by ~40% • Secure RBAC system implemented for multiple organizational roles.",
+      "diagram": "https://res.cloudinary.com/my-first-blog-app/image/upload/v1773576705/Generated_Image_March_15_2026_-_5_40PM_lfh4ze.png"
     }
   ],
+
   "quickSummary": {
     "experience": "4+ Years",
-    "topSkills": ["React/Next.js", "Node.js/Go", "AWS/K8s", "System Design"],
-    "availability": "Open for Senior Roles",
-    "location": "Remote / Hybrid",
+    "topSkills": [
+      "React/Next.js",
+      "Node.js/Golang",
+      "AI Systems",
+      "System Design"
+    ],
+    "availability": "Immediate Joiner",
+    "location": "Open to Remote / Hybrid",
     "highlights": [
-      "Led team of 5 engineers",
-      "Architected 3 production-scale platforms",
-      "Open source contributor (100+ PRs)"
+      "Built AI powered document intelligence systems",
+      "Developed multi provider LLM orchestration platforms",
+      "Experienced across full stack web and AI applications"
     ]
   }
 }

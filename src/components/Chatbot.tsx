@@ -54,14 +54,14 @@ export const Chatbot: React.FC = () => {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-6 right-6 z-90">
       <AnimatePresence>
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
-            className="absolute bottom-20 right-0 w-80 sm:w-96 h-[450px] max-h-[70vh] glass rounded-2xl flex flex-col overflow-hidden border border-white/10 shadow-2xl"
+            className="absolute bottom-20 right-0 w-80 sm:w-96 h-135 max-h-[70vh] glass rounded-2xl flex flex-col overflow-hidden border border-white/10 shadow-2xl"
           >
             {/* Header */}
             <div className="p-4 bg-primary/10 border-b border-white/10 flex items-center justify-between">

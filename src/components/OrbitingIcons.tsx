@@ -36,7 +36,7 @@ export const OrbitingIcons: React.FC = () => {
               rotate: [0, 360]
             }}
             transition={{
-              duration: 20,
+              duration: 5,
               repeat: Infinity,
               ease: "linear",
               delay: index * 0.5
@@ -68,7 +68,7 @@ export const OrbitingIcons: React.FC = () => {
               rotate: [0, -360]
             }}
             transition={{
-              duration: 15,
+              duration: 5,
               repeat: Infinity,
               ease: "linear",
               delay: index * 1
