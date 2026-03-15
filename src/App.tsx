@@ -740,34 +740,38 @@ const Navbar = () => {
           <ThemeToggler />
         </div>
 
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden text-white p-2 -mr-2"
-        >
-          {mobileOpen ? <X size={24} /> : <TerminalIcon size={24} />}
-        </button>
+        <div className="flex items-center gap-2 md:hidden">
+          <ThemeToggler />
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="text-white p-2 -mr-2"
+          >
+            {mobileOpen ? <X size={24} /> : <TerminalIcon size={24} />}
+          </button>
+        </div>
       </div>
 
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-bg/95 border-b border-white/10 overflow-hidden relative z-50"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            className="md:hidden bg-bg/95 border-b border-white/10 relative z-50"
           >
             <div className="flex flex-col p-6 gap-6">
               {navLinks.map((link, i) => (
                 <a
                   key={i}
                   href={link.href}
-                  onClick={() => setMobileOpen(false)}
+                  onClick={() => {
+                    setTimeout(() => setMobileOpen(false), 150);
+                  }}
                   className="font-orbitron text-sm font-bold tracking-[0.2em] text-white"
                 >
                   {link.name}
                 </a>
               ))}
-              <ThemeToggler />
             </div>
           </motion.div>
         )}

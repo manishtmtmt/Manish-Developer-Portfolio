@@ -54,7 +54,7 @@ export const ThemeToggler: React.FC = () => {
               initial={{ opacity: 0, y: -20, scale: 0.8 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -20, scale: 0.8 }}
-              className="absolute top-16 right-0 glass p-4 rounded-2xl border border-white/10 min-w-[180px] shadow-2xl"
+              className="absolute top-16 right-0 bg-bg/95 backdrop-blur-xl p-4 rounded-2xl border border-white/10 min-w-[180px] shadow-2xl"
             >
               <h4 className="text-[10px] font-orbitron text-white/40 uppercase tracking-widest mb-4 px-2">
                 Select Theme
