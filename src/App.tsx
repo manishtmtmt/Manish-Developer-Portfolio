@@ -83,7 +83,7 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-bg text-white selection:bg-primary selection:text-bg md:cursor-none">
+    <div className="min-h-screen bg-bg text-white selection:bg-primary selection:text-bg md:cursor-none overflow-x-hidden">
       <CustomCursor />
       <ThreeScene />
       <Navbar />
@@ -267,7 +267,7 @@ export default function App() {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="relative"
+            className="relative overflow-hidden"
           >
             <OrbitingIcons />
             <div className="relative z-10 w-full aspect-square max-w-xs mx-auto rounded-full overflow-hidden neon-border group">
