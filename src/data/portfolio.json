@@ -1,0 +1,121 @@
+{
+  "profile": {
+    "name": "Manish Tiwari",
+    "title": "Full Stack Engineer",
+    "tagline": "Architecting Scalable Systems & Immersive Digital Experiences",
+    "bio": "I am a Senior Software Engineer with 4+ years of experience specializing in building high-performance web applications. My passion lies at the intersection of robust backend architecture and cutting-edge frontend interactions.",
+    "avatar": "https://picsum.photos/seed/manish/400/400",
+    "resumeUrl": "#",
+    "email": "manisht.mt.mt@gmail.com"
+  },
+  "socials": [
+    { "platform": "GitHub", "url": "https://github.com", "icon": "Github" },
+    { "platform": "LinkedIn", "url": "https://linkedin.com", "icon": "Linkedin" },
+    { "platform": "Twitter", "url": "https://twitter.com", "icon": "Twitter" },
+    { "platform": "WhatsApp", "url": "https://wa.me/910000000000", "icon": "MessageCircle" }
+  ],
+  "skills": [
+    {
+      "category": "Languages",
+      "items": ["TypeScript", "JavaScript", "Python", "Go", "Rust"]
+    },
+    {
+      "category": "Frontend",
+      "items": ["React", "Next.js", "TailwindCSS", "Framer Motion", "Three.js"]
+    },
+    {
+      "category": "Backend",
+      "items": ["Node.js", "Express", "FastAPI", "GraphQL", "gRPC"]
+    },
+    {
+      "category": "Databases",
+      "items": ["PostgreSQL", "MongoDB", "Redis", "Elasticsearch"]
+    },
+    {
+      "category": "Cloud & DevOps",
+      "items": ["AWS", "Docker", "Kubernetes", "CI/CD", "Terraform"]
+    }
+  ],
+  "journey": [
+    {
+      "year": "2024 - Present",
+      "title": "Senior Software Engineer",
+      "organization": "Tech Innovators Inc.",
+      "type": "experience",
+      "description": "Leading the development of a cloud-native microservices platform serving 1M+ active users.",
+      "technologies": ["React", "Node.js", "Kubernetes", "AWS"]
+    },
+    {
+      "year": "2022 - 2024",
+      "title": "Full Stack Developer",
+      "organization": "Digital Solutions Ltd.",
+      "type": "experience",
+      "description": "Developed and maintained multiple high-traffic e-commerce applications.",
+      "technologies": ["Next.js", "TypeScript", "PostgreSQL"]
+    },
+    {
+      "year": "2018 - 2022",
+      "title": "B.Tech in Computer Science",
+      "organization": "Global Institute of Technology",
+      "type": "education",
+      "description": "Specialized in Distributed Systems and Artificial Intelligence.",
+      "technologies": ["Algorithms", "Data Structures", "OS", "Networking"]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Quantum Ledger",
+      "description": "A high-frequency blockchain explorer with real-time data visualization and predictive analytics.",
+      "image": "https://picsum.photos/seed/quantum/800/450",
+      "tags": ["React", "D3.js", "WebSockets", "Rust"],
+      "type": "professional",
+      "metrics": [
+        { "label": "Latency", "value": "< 50ms" },
+        { "label": "Throughput", "value": "10k tps" },
+        { "label": "Uptime", "value": "99.99%" }
+      ]
+    },
+    {
+      "title": "Neural Mesh",
+      "description": "Distributed AI training platform utilizing idle browser resources via WebAssembly.",
+      "image": "https://picsum.photos/seed/neural/800/450",
+      "tags": ["WASM", "Go", "React", "WebRTC"],
+      "github": "https://github.com",
+      "demo": "https://demo.com",
+      "type": "personal",
+      "metrics": [
+        { "label": "Nodes", "value": "500+" },
+        { "label": "Efficiency", "value": "+40%" }
+      ]
+    },
+    {
+      "title": "Cyber-Terminal OS",
+      "description": "A browser-based operating system shell with a fully functional terminal and file system.",
+      "image": "https://picsum.photos/seed/terminal/800/450",
+      "tags": ["TypeScript", "Xterm.js", "Node.js"],
+      "github": "https://github.com",
+      "demo": "https://demo.com",
+      "type": "personal",
+      "metrics": [
+        { "label": "Boot Time", "value": "0.8s" },
+        { "label": "Commands", "value": "50+" }
+      ]
+    },
+    {
+      "title": "Enterprise Cloud Gateway",
+      "description": "Secure API gateway for enterprise-scale microservices architecture.",
+      "image": "https://picsum.photos/seed/gateway/800/450",
+      "tags": ["Go", "gRPC", "Redis", "Docker"],
+      "type": "professional",
+      "metrics": [
+        { "label": "Requests", "value": "1M/day" },
+        { "label": "Security", "value": "Zero Trust" }
+      ]
+    }
+  ],
+  "github": {
+    "username": "manishtiwari",
+    "stats": "https://github-readme-stats.vercel.app/api?username=manishtiwari&show_icons=true&theme=tokyonight",
+    "languages": "https://github-readme-stats.vercel.app/api/top-langs/?username=manishtiwari&layout=compact&theme=tokyonight"
+  }
+}

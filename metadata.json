@@ -1,0 +1,9 @@
+{
+  "name": "Manish Tiwari | Full Stack Engineer",
+  "description": "Premium Cyberpunk Developer Portfolio - Futuristic, Interactive, and AI-Powered.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}
