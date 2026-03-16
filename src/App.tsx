@@ -635,6 +635,11 @@ export default function App() {
                   className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 focus:outline-none focus:border-primary/50 transition-colors resize-none"
                 />
               </div>
+              <input
+                type="hidden"
+                name="to_name"
+                value={portfolioData.profile.name.split(" ")[0]}
+              />
               <button
                 type="submit"
                 disabled={formStatus === "sending"}
