@@ -607,7 +607,7 @@ export default function App() {
                   </label>
                   <input
                     type="text"
-                    name="user_name"
+                    name="from_name"
                     required
                     className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 focus:outline-none focus:border-primary/50 transition-colors"
                   />
@@ -618,7 +618,7 @@ export default function App() {
                   </label>
                   <input
                     type="email"
-                    name="user_email"
+                    name="from_email"
                     required
                     className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 focus:outline-none focus:border-primary/50 transition-colors"
                   />
