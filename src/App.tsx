@@ -10,6 +10,7 @@ import {
   ChevronRight,
   MessageCircle,
   ExternalLink,
+  Calendar,
   Zap,
   Shield,
   BarChart3,
@@ -28,6 +29,7 @@ import { cn } from "./utils/cn";
 import { useSubmit } from "./hooks/useSubmit";
 import Tilt from "react-parallax-tilt";
 import { GitHubCalendar } from "react-github-calendar";
+import { InlineWidget } from "react-calendly";
 
 export default function App() {
   const [isTerminalOpen, setIsTerminalOpen] = useState(false);
@@ -83,7 +85,7 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-bg text-white selection:bg-primary selection:text-bg md:cursor-none overflow-x-hidden">
+    <div className="min-h-screen tech-bg text-white selection:bg-primary selection:text-bg md:cursor-none overflow-x-hidden">
       <CustomCursor />
       <ThreeScene />
       <Navbar />
@@ -133,6 +135,17 @@ export default function App() {
               >
                 <Zap size={18} />
                 {isSummaryMode ? "EXIT SUMMARY" : "RECRUITER MODE"}
+              </button>
+              <button
+                onClick={() => {
+                  document
+                    .getElementById("calendly")
+                    ?.scrollIntoView({ behavior: "smooth", block: "start" });
+                }}
+                className="px-5 py-3 sm:px-8 sm:py-4 border border-secondary/40 rounded-full font-orbitron text-xs sm:text-sm font-bold transition-all duration-300 flex items-center gap-2 bg-secondary/10 text-secondary hover:bg-secondary hover:text-bg"
+              >
+                <Calendar size={18} />
+                BOOK CALENDLY
               </button>
             </div>
 
@@ -208,12 +221,7 @@ export default function App() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1 }}
-              className={cn(
-                "flex gap-8",
-                isSummaryMode
-                  ? "mt-12 justify-center"
-                  : "absolute bottom-0 left-1/2 -translate-x-1/2",
-              )}
+              className={cn("flex gap-8 mt-12 justify-center")}
             >
               {portfolioData.socials.map((social, i) => (
                 <a
@@ -270,7 +278,7 @@ export default function App() {
             className="relative overflow-hidden"
           >
             <OrbitingIcons />
-            <div className="relative z-10 w-full aspect-square max-w-xs mx-auto rounded-full overflow-hidden neon-border group">
+            <div className="relative z-10 w-64 lg:w-80 aspect-square max-w-xs mx-auto rounded-full overflow-hidden neon-border group">
               <img
                 src={portfolioData.profile.avatar}
                 alt="Manish Tiwari"
@@ -560,7 +568,9 @@ export default function App() {
                 <h4 className="font-orbitron text-xs text-white/40 uppercase tracking-widest mb-1">
                   LinkedIn
                 </h4>
-                <p className="text-sm font-mono">/in/manishtiwari</p>
+                <p className="text-sm font-mono">
+                  {portfolioData.profile.linkedin}
+                </p>
               </div>
             </div>
             <a
@@ -663,6 +673,38 @@ export default function App() {
               </AnimatePresence>
             </form>
           </div>
+
+          {/* Calendly Booking Widget */}
+          <motion.div
+            id="calendly"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-8 sm:mt-12 scroll-mt-28 glass rounded-2xl sm:rounded-[3rem] overflow-hidden border border-white/5 hover:border-primary/20 transition-all"
+          >
+            <div className="p-6 sm:p-10 border-b border-white/5">
+              <div className="flex items-center gap-3">
+                <span className="text-primary font-mono text-xs tracking-[0.5em] uppercase">
+                  SCHEDULE
+                </span>
+              </div>
+              <h3 className="text-2xl sm:text-3xl font-orbitron font-black tracking-tight mt-1">
+                Book a Call
+              </h3>
+              <div className="h-1 bg-gradient-to-r from-primary to-transparent mt-4 w-20" />
+            </div>
+            <InlineWidget
+              url={portfolioData.calendly.url}
+              styles={{ minWidth: "320px", height: "700px" }}
+              pageSettings={{
+                backgroundColor: "0d0d0d",
+                hideEventTypeDetails: false,
+                hideLandingPageDetails: false,
+                primaryColor: "00FF41",
+                textColor: "ffffff",
+              }}
+            />
+          </motion.div>
         </section>
       </main>
 

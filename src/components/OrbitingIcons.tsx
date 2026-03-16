@@ -18,7 +18,7 @@ export const OrbitingIcons: React.FC = () => {
     <div className="absolute inset-0 pointer-events-none">
       {icons.map(({ Icon, color }, index) => {
         const angle = (index / icons.length) * Math.PI * 2;
-        const radius = 220; // Radius of orbit
+        const radius = 180; // Radius of orbit
         
         return (
           <motion.div

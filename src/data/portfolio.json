@@ -6,7 +6,8 @@
     "bio": "Full Stack Engineer with 4+ years of experience developing modern web applications and AI-driven systems. Experienced in building scalable backend services, interactive frontend applications, and integrating advanced AI technologies such as Retrieval Augmented Generation and agent-based AI systems.",
     "avatar": "https://res.cloudinary.com/my-first-blog-app/image/upload/v1773573245/Generated_Image_March_15_2026_-_4_37PM_u7h7bt.png",
     "resumeUrl": "https://drive.google.com/file/d/1dBUSvK05C5g0r4SLNSh5LRIa3tlJyIlZ/view?usp=sharing",
-    "email": "manisht.mt.mt@gmail.com"
+    "email": "manisht.mt.mt@gmail.com",
+    "linkedin": "/in/wdmanisht"
   },
 
   "socials": [
@@ -196,15 +197,17 @@
 
     {
       "title": "Sketch Master",
-      "description": "Internal HRMS system designed to streamline organizational workflows including document management and leave scheduling with role-based access control.",
-      "image": "https://res.cloudinary.com/my-first-blog-app/image/upload/v1773577753/Generated_Image_March_15_2026_-_5_53PM_wailzr.png",
+      "description": "Jewellery sketch approval system supporting multi-image uploads, diamond metadata, two-stage manager approvals, feedback comments, and real-time workflow tracking with RBAC.",
+      "image": "https://res.cloudinary.com/my-first-blog-app/image/upload/v1773629965/Generated_Image_March_16_2026_-_8_26AM_cylxiw.png",
       "tags": [
         "Node.js",
         "Express",
         "React Router",
+        "PostgreSQL",
+        "Prisma",
+        "SocketIO",
         "JWT",
-        "RBAC",
-        "TailwindCSS"
+        "RBAC"
       ],
       "type": "professional",
       "metrics": [
@@ -212,10 +215,13 @@
           "label": "Security",
           "value": "JWT + 5 RBAC Roles"
         },
-        { "label": "Modules", "value": "6+ HR Modules" },
+        {
+          "label": "Workflow",
+          "value": "2-Level Sketch Approval System"
+        },
         {
           "label": "Impact",
-          "value": "40% Workflow Improvement"
+          "value": "40% Faster Design Approval Cycle"
         }
       ]
     },
@@ -399,5 +405,9 @@
       "Developed multi provider LLM orchestration platforms",
       "Experienced across full stack web and AI applications"
     ]
+  },
+
+  "calendly": {
+    "url": "https://calendly.com/manisht-mt-mt/30min"
   }
 }
